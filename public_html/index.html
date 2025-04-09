@@ -1,20 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project_map</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="favicon-16x16.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon_36x36.png">
+    <title>barrier_free_map</title>
+    <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="./css/map.css">
+
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="./js/script.js"></script>
+
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=dkrfddpqje&amp;submodules=geocoder"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="crossorigin="anonymous"></script>
+    <script src="./js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="crossorigin="anonymous"></script>
+
+
+
+
+
+
 </head>
 
 <body>
-    <div sytle="margin-top: 20px; margin-bottom: 10px; font-weight: bold;">
-        약국지도
-    </div>
-    <div id="map" style="width: 100%; height: 600px;"></div>
+    <!-- 지도 -->
+    <div data-role="page" id="map1">
+        
+
+        <div data-role="header" data-position="fixed" id="map_header">
+            <input type="search" name="input" id="map_input" data-clear-btn="true" placeholder="주변 약국" />
+            <a href="#map2" class="ui-btn-right findr"><img src="images/find_road.png" width="38" height="40" alt="길찾기"></a>
+        </div>
+
+        <div data-role="content" id="map_content" data-position="fixed">
+            <ul class="fr">
+                <li><a href="http://yeun01.dothome.co.kr/project05/index.html#like" data-ajax="false"><img src="images/map_like.png" width="48" height="48" alt="like"></a></li>
+                <li><a href="#"><img src="images/map_spot.png" width="48" height="48" alt=""></a></li>
+                <li><a href="#"><img src="images/map_weather.png" width="48" height="106" alt=""></a></li>
+                <li class="map_set"><a href="http://yeun01.dothome.co.kr/project05/index.html#setting" data-ajax="false"><img src="images/map_setting.png" width="48" height="48" alt=""></a></li>
+            </ul>
+            <div id="map"></div>
+
+        </div>
+
+
+
     <script>
         $(document).ready(async function(){
             let XY = await getLocation();
@@ -182,5 +214,19 @@
         }
     }  
     </script>
+
+        <div data-role="footer" id="main_footer" class="ui-bar footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="http://yeun01.dothome.co.kr/project05/index.html#notice" data-ajax="false"><img src="images/speaker_off.png" alt="speaker"></a></li>
+                    <li><a href="#"><img src="images/map_on.png" alt="map"></a></li>
+                    <li class="home"><a href="http://yeun01.dothome.co.kr/project05/index.html#main" data-ajax="false"><img src="images/home_off.png" alt="home"></a></li>
+                    <li><a href="http://yeun01.dothome.co.kr/project05/index.html#free_board" data-ajax="false"><img src="images/comm_off.png" alt="comm"></a></li>
+                    <li><a href="http://yeun01.dothome.co.kr/project05/index.html#mypage_main" data-ajax="false"><img src="images/my_off.png" alt="my"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>

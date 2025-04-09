@@ -1,15 +1,23 @@
+*{margin: 0; padding: 0; border: 0;}
+li{list-style: none;}
+a{display: block; color: #333333; text-decoration: none; font-family: "맑은 고딕", Arial, Helvetica, sans-serif; font-size: 1.1em;}
+.ui-page-theme-a{display: block; color: #333333; text-decoration: none; font-family: "맑은 고딕", Arial, Helvetica, sans-serif; font-size: 1.1em;}
+.ui-page-theme-a a:hover{display: block; color: #333333; text-decoration: none; font-family: "맑은 고딕", Arial, Helvetica, sans-serif;}
+.ui-page-theme-a a:visited{display: block; color: #333333; text-decoration: none; font-family: "맑은 고딕", Arial, Helvetica, sans-serif;}
 
+.fl{float: left;}
+.fr{float: right;}
+.cf:after{display: block; content: ''; clear: both;}
+.cb{clear: both;}
 
-
-
-
-
-
+html{scrollbar-width: none;}
+body{background-color:#ffffff;}
+.ui-fixed-hidden {position: fixed;}
 
 
 #map_header{height: 90px; background: rgba(177, 204, 200, 0.6);}
 .ui-input-search{width: 73%; margin-left: 3%; margin-top: 22px;}
-#map_header .findr{top: 23%; right: 3%; }
+#map_header .findr{top: 16%; right: 1%;}
 
 /* cntent */
 #map_content ul{width: 60px; position: fixed; top: 20%; right: 5%; z-index: 999999999999;}
@@ -20,6 +28,15 @@
 .ui-content{padding: 0;}
 
 
+
+.footer{height: 55px; background-color: #fff; border-top: 1px solid #6CA097;}
+    .footer ul{padding-top: 10px;}
+        .footer ul li.home img{margin-top: -2px;}
+
+    .ui-btn{border-style: none;}
+    .ui-bar{padding: 0px}
+
+    .ui-page-theme-a .ui-btn {background: none; border: none; box-shadow: none; padding: -1px 0px 0px 0px;}
 
 
 
